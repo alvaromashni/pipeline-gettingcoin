@@ -9,7 +9,7 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
     AIRFLOW__WEBSERVER__EXPOSE_CONFIG: 'true'
     DB_HOST: postgres
-    DB_PORT: 55433
+    DB_PORT: 5432
     DB_NAME: datalake
     DB_USER: postgres
     DB_PASSWORD: ${DB_PASSWORD}
@@ -42,7 +42,7 @@ services:
       interval: 10s
       retries: 5
     ports:
-      - "55433:5433"
+      - "55433:5432"
 
   airflow-init:
     <<: *airflow-common

@@ -1,5 +1,5 @@
 import requests
-from config import API_BASE_URL, BASE_CURRENCY, TARGET_CURRENCIES, get_date_range
+from .config import API_BASE_URL, BASE_CURRENCY, TARGET_CURRENCIES, get_date_range
 
 def fetch_rates() -> list[dict]:
     start, end = get_date_range()
